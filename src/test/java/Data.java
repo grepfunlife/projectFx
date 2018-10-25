@@ -3,7 +3,7 @@ import org.testng.annotations.DataProvider;
 public class Data {
 
     @DataProvider(name = "data-provider")
-    public static Object[][] dataProviderMethod() {
+    static Object[][] dataProviderMethod() {
         return new Object[][]{
                 {4, "0.25"},
                 {0, "х не должен быть равен нулю"},
