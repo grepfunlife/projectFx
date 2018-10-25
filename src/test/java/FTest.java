@@ -1,6 +1,4 @@
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -12,14 +10,14 @@ public class FTest {
     protected  ByteArrayOutputStream output;
     private PrintStream old;
 
-    @BeforeTest
+    @BeforeMethod
     public void setUpStreams() {
         old = System.out;
         output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
     }
 
-    @AfterTest
+    @AfterMethod
     public void cleanUpStreams() {
         System.setOut(old);
     }
