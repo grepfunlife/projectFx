@@ -1,4 +1,4 @@
-import static java.sql.DriverManager.println;
+import static java.lang.System.*;
 
 public class Fx {
 
@@ -15,7 +15,7 @@ public class Fx {
             f = 1 / x;
             result = Double.toString(f);
         }
-        println(result);
+        out.println(result);
         return result;
     }
 }
